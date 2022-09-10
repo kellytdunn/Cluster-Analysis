@@ -66,27 +66,6 @@ pax_data = data2 %>% select(gender, ageCat, zipCode, race_1, race_2, race_3, rac
 table(data$tenure)
 
 
-#race_1: AIAN
-#race_2: Asian
-#race_3: Black
-#race_4: Hawaiian/PI
-#race_5: white
-#race_6: Other
-#disability: 1 yes, 2 no
-#income: 
-#Less than $10,000 
-#10,000 to $14,999 
-#$15,000 to $19,999 
-#$20,000 to $24,999 
-#$25,000 to $34,999 
-#35,000 to $49,999 
-#50,000 to $74,999 
-#75,000 to $99,999 
-#100,000 to $149,999 
-#150,000 to $199,999 
-#200,000 or more 
-#gender: 1 male, 2 female (?)
-
 #frequency: 1) 4+ days, 2) 2-3 days, 3) 1/week, 4) 1/month, 5) occasional, 6) first time, 
 #vehicle access: 1) none, 2) some, 3) always, 4) other
 #purpose: 1- work, 2-school, 3-airport, 4-recreation/social, 5-errands, 6-appointments, 7- social services, 8 - other, 9 - na
@@ -103,33 +82,6 @@ clust4_full = pax_data %>% filter(cluster == 4) #slightly older, slightly higher
 clust5_full = pax_data %>% filter(cluster == 5) #more nonbinary, younger, lower income. lower grades for CSM, access, dependable, safety, clean, information, pax care
 
 
-#random code for analysis
 
-
-table(pax_data$cluster)
-summary(clust5_full)
-
-hist(clust5_full$gender)
-hist(pax_data$gender)
-
-hist(clust4_full$ageCat)
-hist(pax_data$ageCat)
-
-hist(clust4_full$disability)
-hist(pax_data$disability)
-
-hist(clust4_full$income)
-hist(pax_data$income)
-
-sort(table(clust2_full$zipCode))
-sort(table(clust3_full$zipCode))
-sort(table(clust4_full$zipCode))
-sort(table(clust5_full$zipCode))
-
-
-
-sort(table(pax_data$zipCode))
-
-summary(pax_data)
 
 
